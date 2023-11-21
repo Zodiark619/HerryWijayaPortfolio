@@ -1,0 +1,20 @@
+﻿@page
+@model HerryWijayaPortfolio.Pages.Portfolio.TipCalculator.TipCalculatorModel
+@{
+}
+
+
+<div class="ccontainer form-group">
+    <form method="post">
+    <h1>Tip Calculator</h1>
+    <p>Enter the bill amount and the bill percentage to calculate the total.</p>
+    <label asp-for="@Model.bill">Bill amount:</label>
+        <input  asp-for="@Model.bill" step=".01"  class="form-control" lang="en"><br>
+    <label asp-for="@Model.tip">Tip Percentage:</label><br>
+        <input asp-for="@Model.tip" step=".01" class="form-control" lang="en"><br>
+
+    <button asp-page-handler="CalculateTip" type="submit" class="btn btn-success" style="margin:auto">Calculate</button><br>
+    <label asp-for="@Model.total">Total:</label>
+        <span id="total">@Model.total</span>
+    </form>
+</div>

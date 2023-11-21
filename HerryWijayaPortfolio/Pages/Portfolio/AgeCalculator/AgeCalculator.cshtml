@@ -1,0 +1,22 @@
+﻿@page
+@model HerryWijayaPortfolio.Pages.Portfolio.AgeCalculator.AgeCalculatorModel
+@{
+}
+
+
+
+
+<div class="container" style="border:solid black 1px;width:20%;" >
+    <h1>Age Calculator</h1>
+    <form method="post">
+
+    <div class="fform">
+        <p>Enter your date of birth</p>
+        <input type="date" asp-for="AgeCalculatorInstance.Age">
+        <button class="btn btn-success mt-5" asp-page-handler="CalculateAge" type="submit">Calculate Age</button>
+
+            <p id="result">@Model.AgeCalculatorInstance.message</p>
+    </div>
+    </form>
+
+</div>
